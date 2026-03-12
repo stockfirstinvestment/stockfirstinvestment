@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFirst Investment Ltd | Investment Consultation</title>
+  <meta name="description" content="Grow your wealth with smarter investment strategies. Request an investment consultation with StockFirst Investment Ltd." />
+  <meta name="keywords" content="investment consultation, financial advisory, wealth management, StockFirst Investment Ltd, Lagos investment firm" />
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --navy-2: #132b4f;
+      --gold: #c9a44c;
+      --gold-soft: #e7d2a0;
+      --white: #ffffff;
+      --off-white: #f7f9fc;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --border: #d9e0ea;
+      --success: #eaf7ee;
+      --success-text: #166534;
+      --shadow: 0 12px 30px rgba(11, 31, 58, 0.12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      line-height: 1.55;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section { padding: 40px 0; }
+
+    .topbar {
+      padding: 12px 0;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11,31,58,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      color:var(--navy);
+      font-size:1.2rem;
+      text-decoration:none;
+    }
+
+    .brand-icon{
+      width:34px;
+      height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .brand-icon svg{
+      width:100%;
+      height:100%;
+      display:block;
+    }
+
+    .logo-text{
+      font-family:"Courier New", monospace;
+      font-size:1.15rem;
+      line-height:1.1;
+      color:var(--navy);
+      letter-spacing:1px;
+    }
+
+    .logo-text span{
+      display:block;
+    }
+
+    
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .nav-cta:hover,
+    .primary-btn:hover,
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .hero {
+      padding: 28px 0 24px;
+      background: #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(201,164,76,0.12);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.06;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 540px;
+    }
+
+    .hero-graphic{
+      margin-top: 22px;
+      max-width: 500px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid rgba(11,31,58,0.08);
+      border-radius: 22px;
+      padding: 18px 18px 12px;
+      box-shadow: 0 14px 34px rgba(11,31,58,0.08);
+      overflow: hidden;
+    }
+
+    .hero-graphic svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-insight {
+      margin-top: 14px;
+      max-width: 500px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--gold);
+      background: #fbfcfe;
+      border-radius: 12px;
+    }
+
+    .insight-person{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:12px;
+      padding-top:10px;
+      border-top:1px solid rgba(11,31,58,0.08);
+    }
+
+    .insight-person img{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .insight-person span{
+      font-size:0.85rem;
+      color:var(--muted);
+      line-height:1.4;
+    }
+      margin-top: 14px;
+      max-width: 500px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--gold);
+      background: #fbfcfe;
+      border-radius: 12px;
+    }
+
+    .hero-insight p {
+      margin: 0 0 8px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .hero-insight a {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .hero-insight a:hover {
+      text-decoration: underline;
+    }
+
+    .hero p {
+      margin: 0 0 18px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 540px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 22px;
+      max-width: 420px;
+    }
+
+    .point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #f6f8fb;
+      border: 1px solid rgba(11,31,58,0.08);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .point::before {
+      content: "✔";
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      border: none;
+      cursor: pointer;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(11,31,58,0.08);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card {
+      padding: 28px;
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    .form-card h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.55rem;
+    }
+
+    .form-card .subtext {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(201,164,76,0.9);
+      box-shadow: 0 0 0 4px rgba(201,164,76,0.14);
+    }
+
+    textarea {
+      min-height: 104px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 6px;
+      padding: 15px 18px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold), #b88b28);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .privacy-note {
+      margin-top: 14px;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--success);
+      color: var(--success-text);
+      font-weight: 600;
+      border: 1px solid #c9ebd3;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .mini-card {
+      padding: 22px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mini-card h3::before {
+      content: "✔";
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .about-contact {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .about-content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .about-feature {
+      padding: 16px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1px solid rgba(11,31,58,0.08);
+    }
+
+    .about-feature h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 0.98rem;
+    }
+
+    .about-feature p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .info-card {
+      padding: 28px;
+    }
+
+    .info-card h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .info-card p,
+    .info-card li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .contact-compact {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact-compact span {
+      margin-right: 18px;
+      white-space: nowrap;
+    }
+
+    .contact-compact strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .contact-compact a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .contact-compact a:hover {
+      text-decoration: underline;
+    }
+
+    /* removed large contact cards */
+
+    .contact-item a {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .contact-item {
+      background: #f8fafc;
+      border: 1px solid rgba(11,31,58,0.08);
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .contact-item h3 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      color: var(--navy);
+      letter-spacing: .03em;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+      display: block;
+    }
+
+    .contact-line strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    footer {
+      padding: 18px 0 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-wrap {
+      border-top: 1px solid rgba(11,31,58,0.08);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-contact,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 32px;
+      }
+
+      .form-card,
+      .info-card,
+      .mini-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .topbar {
+        padding: 14px 0;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .nav-cta {
+        padding: 10px 14px;
+        font-size: 0.92rem;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="StockFirst Investment Ltd home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a44c"/>
+                <stop offset="100%" stop-color="#0b1f3a"/>
+              </linearGradient>
+              <linearGradient id="logoBar" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#132b4f"/>
+                <stop offset="100%" stop-color="#0b1f3a"/>
+              </linearGradient>
+            </defs>
+
+            <!-- bars -->
+            <rect x="8" y="36" width="8" height="16" rx="2" fill="url(#logoBar)"/>
+            <rect x="22" y="28" width="8" height="24" rx="2" fill="url(#logoBar)"/>
+            <rect x="36" y="20" width="8" height="32" rx="2" fill="url(#logoBar)"/>
+
+            <!-- growth curve -->
+            <path d="M8 40 C18 34, 24 32, 30 28 C36 24, 42 20, 52 12" fill="none" stroke="url(#logoGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- arrow head -->
+            <polygon points="50,8 58,12 48,16" fill="#c9a44c"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span>StockFirst</span>
+          <span>Investment Ltd</span>
+        </div>
+      </a>
+      <a href="#consultation-form" class="nav-cta">Request Investment Consultation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Trusted Financial Guidance</div>
+          <h1>Grow Your Wealth with Smarter Investment Strategies</h1>
+          <p>
+            StockFirst Investment helps individuals and businesses make informed financial decisions through expert investment guidance.
+          </p>
+
+          <div class="hero-graphic" aria-hidden="true">
+            <svg viewBox="0 0 520 300" width="100%" height="auto" role="img" aria-label="Investment growth chart illustration">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#c9a44c" stop-opacity="0.22"/>
+                  <stop offset="100%" stop-color="#c9a44c" stop-opacity="0.02"/>
+                </linearGradient>
+                <linearGradient id="trendStroke" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8ea4bf"/>
+                  <stop offset="65%" stop-color="#c9a44c"/>
+                  <stop offset="100%" stop-color="#0b1f3a"/>
+                </linearGradient>
+                <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0b1f3a" flood-opacity="0.10"/>
+                </filter>
+              </defs>
+
+              <rect x="0" y="0" width="520" height="300" rx="20" fill="#ffffff"/>
+
+              <g stroke="#e9eff6" stroke-width="1">
+                <line x1="56" y1="42" x2="56" y2="248"/>
+                <line x1="56" y1="248" x2="482" y2="248"/>
+                <line x1="56" y1="200" x2="482" y2="200"/>
+                <line x1="56" y1="152" x2="482" y2="152"/>
+                <line x1="56" y1="104" x2="482" y2="104"/>
+                <line x1="56" y1="56" x2="482" y2="56"/>
+              </g>
+
+              <g fill="#8b97a8" font-size="11" font-family="Inter, Arial, sans-serif">
+                <text x="24" y="252">0</text>
+                <text x="18" y="204">20</text>
+                <text x="18" y="156">40</text>
+                <text x="18" y="108">60</text>
+                <text x="18" y="60">80</text>
+                <text x="60" y="272">Q1</text>
+                <text x="156" y="272">Q2</text>
+                <text x="255" y="272">Q3</text>
+                <text x="355" y="272">Q4</text>
+                <text x="444" y="272">Q5</text>
+              </g>
+
+              <path d="M56 248 L120 216 L196 188 L272 154 L348 120 L420 90 L468 54 L468 248 Z" fill="url(#areaFill)"/>
+
+              <path d="M56 248 C84 236, 100 226, 120 216 C145 204, 168 198, 196 188 C220 178, 245 168, 272 154 C296 140, 322 132, 348 120 C374 108, 398 98, 420 90 C438 82, 452 72, 468 54" fill="none" stroke="url(#trendStroke)" stroke-width="5" stroke-linecap="round" filter="url(#softShadow)"/>
+
+              <g fill="#ffffff" stroke="#c9a44c" stroke-width="3">
+                <circle cx="120" cy="216" r="6"/>
+                <circle cx="196" cy="188" r="6"/>
+                <circle cx="272" cy="154" r="6"/>
+                <circle cx="348" cy="120" r="6"/>
+                <circle cx="420" cy="90" r="6"/>
+              </g>
+
+              <g transform="translate(394 24)">
+                <rect x="0" y="0" width="96" height="44" rx="12" fill="#0b1f3a"/>
+                <text x="14" y="18" fill="#c9a44c" font-size="10" font-family="Inter, Arial, sans-serif" font-weight="700">PORTFOLIO</text>
+                <text x="14" y="33" fill="#ffffff" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">+18.4%</text>
+              </g>
+
+              <g transform="translate(326 78)">
+                <path d="M0 20 L28 0 L56 20" fill="none" stroke="#0b1f3a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="28" y1="0" x2="28" y2="34" stroke="#0b1f3a" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="hero-insight">
+            <p>Looking to understand today’s investment landscape in Nigeria? Read this recent market article for practical insights on getting started more safely.</p>
+            <a href="https://nairametrics.com/2026/02/07/riding-nigerias-stock-surge-practical-tips-and-steps-to-enter-the-market-safely/" target="_blank" rel="noopener noreferrer">Learn more about investing in Nigeria →</a>
+
+            <div class="insight-person">
+              <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=200&q=80" alt="Nigerian investment professional" />
+              <span>
+                Insights shared by Nigerian market analysts highlight growing opportunities in equities and diversified portfolios across the local market.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card form-card" id="consultation-form">
+          <h2>Request a Consultation</h2>
+          <p class="subtext">Complete the short form and our investment team will contact you shortly.</p>
+
+          <form id="leadForm" class="form-grid" method="post" action="#" novalidate>
+            <div>
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email address" required />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+            </div>
+
+            <div>
+              <label for="interest">Investment Interest</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option</option>
+                <option>Personal Investment Advisory</option>
+                <option>Business Investment Strategy</option>
+                <option>Wealth Management Guidance</option>
+                <option>Portfolio Consultation</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about your investment goals"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Consultation</button>
+          </form>
+
+          <div class="success-message" id="successMessage" role="status" aria-live="polite">
+            Thank you. Our investment team will contact you shortly.
+          </div>
+
+          <p class="privacy-note">
+            Your contact information will only be used to respond to your inquiry. We do not share your personal data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px;">
+      <div class="container">
+        <span class="section-label">Services</span>
+        <h2 style="color:var(--navy);margin:0 0 18px;">Our Investment Services</h2>
+
+        <div class="mini-grid">
+          <div class="card mini-card">
+            <h3>Investment Advisory</h3>
+            <p>Professional guidance to help individuals and businesses make informed investment decisions.</p>
+          </div>
+
+          <div class="card mini-card">
+            <h3>Portfolio Strategy</h3>
+            <p>Personalized portfolio planning aligned with your financial goals and risk tolerance.</p>
+          </div>
+
+          <div class="card mini-card">
+            <h3>Financial Consulting</h3>
+            <p>Strategic financial insight to support long‑term wealth growth and financial stability.</p>
+          </div>
+
+          <div class="card mini-card">
+            <h3>Wealth Management</h3>
+            <p>Comprehensive strategies to help grow, protect, and manage long‑term financial assets.</p>
+          </div>
+
+          <div class="card mini-card">
+            <h3>Market Research & Insights</h3>
+            <p>Analysis of financial markets and investment opportunities to support better decisions.</p>
+          </div>
+
+          <div class="card mini-card">
+            <h3>Investment Planning</h3>
+            <p>Structured planning to align investments with personal or business financial objectives.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card info-card" style="max-width:760px;margin:auto;">
+          <span class="section-label">Contact</span>
+          <h2>Contact Information</h2>
+
+          <div class="contact-compact">
+            <span><strong>Office:</strong> 17 Ifesowapo Street, Ogudu‑Oke, Lagos</span>
+            <span><strong>Phone:</strong> <a href="tel:+2348023283817">+234 802 328 3817</a></span>
+            <span><strong>Email:</strong> <a href="mailto:info@stockfirstinvestment.com">info@stockfirstinvestment.com</a></span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 StockFirst Investment Ltd. All rights reserved.</div>
+      <div>Professional financial advisory and investment consulting services.</div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Replace this section with your CRM or email integration.
+      // Example options: Formspree, Netlify Forms, HubSpot Forms, Zapier webhook, or a custom backend endpoint.
+      const formData = new FormData(form);
+      console.log('Lead submitted:', Object.fromEntries(formData.entries()));
+
+      form.reset();
+      successMessage.style.display = 'block';
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>
